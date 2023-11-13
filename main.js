@@ -1,6 +1,6 @@
 const userChoiceDisplay = document.getElementById('user-choice');
 const computerChoiceDisplay = document.getElementById('computer-choice');
-const result = document.getElementById('result');
+const displayResult = document.getElementById('result');
 let randomNumber;
 
 function rock() {
@@ -22,7 +22,6 @@ function rock() {
 	}
 
 	userChoiceDisplay.innerHTML = 'Rock';
-
 }
 
 function paper() {
@@ -44,7 +43,6 @@ function paper() {
 	}
 
 	userChoiceDisplay.innerHTML = 'Paper';
-
 }
 
 function scissor() {
@@ -66,22 +64,74 @@ function scissor() {
 	}
 
 	userChoiceDisplay.innerHTML = 'Scissor';
-
 }
+
+function gameResult() {
+
+	if (userChoiceDisplay == 'Rock' && computerChoiceDisplay == 'Paper')
+	{
+		displayResult.innerHTML = 'You Lose!';
+	}
+
+	if (userChoiceDisplay == 'Rock' && computerChoiceDisplay == 'Scissor')
+	{
+		displayResult.innerHTML = 'You Won!';
+	}
+
+	if (userChoiceDisplay == 'Rock' && computerChoiceDisplay == 'Rock')
+	{
+		displayResult.innerHTML = 'Draw!';
+	}
+
+	if (userChoiceDisplay == 'Paper' && computerChoiceDisplay == 'Scissor')
+	{
+		displayResult.innerHTML = 'You Lose!';
+	}
+
+	if (userChoiceDisplay == 'Paper' && computerChoiceDisplay == 'Rock')
+	{
+		displayResult.innerHTML = 'You Won!';
+	}
+
+	if (userChoiceDisplay == 'Paper' && computerChoiceDisplay == 'Paper')
+	{
+		displayResult.innerHTML = 'Draw';
+	}
+
+	if (userChoiceDisplay == 'Scissor' && computerChoiceDisplay == 'Paper')
+	{
+		displayResult.innerHTML = 'You Won!';
+	}
+
+	if (userChoiceDisplay == 'Scissor' && computerChoiceDisplay == 'Rock')
+	{
+		displayResult.innerHTML = 'You Lose!';
+	}
+
+	if (userChoiceDisplay == 'Scissor' && computerChoiceDisplay == 'Scissor')
+	{
+		displayResult.innerHTML = 'Draw!';
+	}
+}
+
+//something wrong with the below code
 
 /* function rock() {
 	userChoiceDisplay.innerHTML = 'Rock';
-	computerChoice()
+	computerChoice();
+	gameResult();
 }
 
 function paper() {
 	userChoiceDisplay.innerHTML = 'Paper';
-	computerChoice()
+	computerChoice();
+	gameResult();
 }
 
 function scissor() {
 	userChoiceDisplay.innerHTML = 'Scissor';
-	computerChoice()
+	computerChoice();
+	gameResult();
 }
 
 function computerChoice() {
