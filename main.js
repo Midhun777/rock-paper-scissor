@@ -1,6 +1,6 @@
 const userChoiceDisplay = document.getElementById('user-choice');
 const computerChoiceDisplay = document.getElementById('computer-choice');
-const displayResult = document.getElementById('result');
+let displayResult = document.getElementById('result');
 let randomNumber;
 
 function rock() {
