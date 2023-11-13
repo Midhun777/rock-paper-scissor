@@ -69,3 +69,38 @@ function scissor() {
 
 }
 
+/* function rock() {
+	userChoiceDisplay.innerHTML = 'Rock';
+	computerChoice()
+}
+
+function paper() {
+	userChoiceDisplay.innerHTML = 'Paper';
+	computerChoice()
+}
+
+function scissor() {
+	userChoiceDisplay.innerHTML = 'Scissor';
+	computerChoice()
+}
+
+function computerChoice() {
+	randomNumber = Math.random() * 3 + 1;
+	randomNumber = Math.floor(randomNumber);
+
+	if (randomNumber == 1)
+	{
+		computerChoiceDisplay.innerHTML = 'Rock';
+	}
+	if (randomNumber == 2)
+	{
+		computerChoiceDisplay.innerHTML = 'Paper';
+	}
+	if (randomNumber == 3)
+	{
+		computerChoiceDisplay.innerHTML = 'Scissor';
+	}
+
+}
+
+*/
