@@ -18,4 +18,3 @@ if (randomNumber == 3)
 {
 	userChoiceDisplay.innerHTML = 'scissor';
 }
-
