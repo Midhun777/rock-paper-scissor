@@ -4,7 +4,8 @@ let displayResult = document.getElementById('result');
 let randomNumber;
 let userChoice;
 let computerChoice;
-
+var userImageOut = document.getElementById("userImage");
+var computerImageOut = document.getElementById("computerImage");
 function generateComputerChoice() {
 
 	randomNumber = Math.random() * 3 + 1;
@@ -29,6 +30,7 @@ function generateComputerChoice() {
 function rock() {
 	userChoiceDisplay.innerHTML = 'Rock';
 	userChoice = 'Rock';
+
 	generateComputerChoice();
 	getResults();
 	getImage();
@@ -88,9 +90,6 @@ function getResults() {
 }
 
 function getImage() {
-
-	var userImageOut = document.getElementById("userImage");
-	var computerImageOut = document.getElementById("computerImage");
 
 	if (userChoice == 'Rock' || computerChoice == 'Rock')
 	{
