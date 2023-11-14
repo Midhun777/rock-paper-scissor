@@ -49,6 +49,11 @@ function scissor() {
 }
 
 function getResults() {
+	if (userChoice == computerChoice)
+	{
+		displayResult.innerHTML = 'Draw!';
+	}
+
 	if (userChoice == 'Rock' && computerChoice == 'Paper')
 	{
 		displayResult.innerHTML = 'You Lose!';
@@ -57,11 +62,6 @@ function getResults() {
 	if (userChoice == 'Rock' && computerChoice == 'Scissor')
 	{
 		displayResult.innerHTML = 'You Won!';
-	}
-
-	if (userChoice == 'Rock' && computerChoice == 'Rock')
-	{
-		displayResult.innerHTML = 'Draw!';
 	}
 
 	if (userChoice == 'Paper' && computerChoice == 'Scissor')
@@ -74,11 +74,6 @@ function getResults() {
 		displayResult.innerHTML = 'You Won!';
 	}
 
-	if (userChoice == 'Paper' && computerChoice == 'Paper')
-	{
-		displayResult.innerHTML = 'Draw';
-	}
-
 	if (userChoice == 'Scissor' && computerChoice == 'Paper')
 	{
 		displayResult.innerHTML = 'You Won!';
@@ -89,8 +84,4 @@ function getResults() {
 		displayResult.innerHTML = 'You Lose!';
 	}
 
-	if (userChoice == 'Scissor' && computerChoice == 'Scissor')
-	{
-		displayResult.innerHTML = 'Draw!';
-	}
 }
