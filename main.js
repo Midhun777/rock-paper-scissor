@@ -2,6 +2,8 @@ const userChoiceDisplay = document.getElementById('user-choice');
 const computerChoiceDisplay = document.getElementById('computer-choice');
 let displayResult = document.getElementById('result');
 let randomNumber;
+let userChoice;
+let computerChoice;
 
 function rock() {
 
@@ -113,6 +115,8 @@ function gameResult() {
 		displayResult.innerHTML = 'Draw!';
 	}
 }
+
+userChoiceDisplay = userChoice;
 
 //something wrong with the below code
 
