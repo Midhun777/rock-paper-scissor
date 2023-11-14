@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Change Image Source</title>
+
+	<style>
+		body {
+			background-color: #7C7C7C;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<img id="myImage" src="/imgs/puzzle.png" alt="Original Image" width="100%">
+	<br>
+	<br>
+	<button onclick="changeImageSource();">hello</button>
+
+	<script>
+	
+		function changeImageSource() {
+			var image = document.getElementById("myImage");
+			image.src = "/imgs/github-mark.png"; // Replace "new-image.jpg" with the desired image source
+ 		}
+
+	</script>
+
+</body>
+
+</html>

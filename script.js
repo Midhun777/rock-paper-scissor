@@ -4,8 +4,12 @@ let displayResult = document.getElementById('result');
 let randomNumber;
 let userChoice;
 let computerChoice;
-var userImageOut = document.getElementById("userImage");
+var imageSrc= document.getElementById("userImage");
 var computerImageOut = document.getElementById("computerImage");
+
+imageSrc.src='/imgs/paper.png';
+
+
 function generateComputerChoice() {
 
 	randomNumber = Math.random() * 3 + 1;
@@ -30,10 +34,8 @@ function generateComputerChoice() {
 function rock() {
 	userChoiceDisplay.innerHTML = 'Rock';
 	userChoice = 'Rock';
-
 	generateComputerChoice();
 	getResults();
-	getImage();
 }
 
 function paper() {
@@ -41,7 +43,6 @@ function paper() {
 	userChoice = 'Paper';
 	generateComputerChoice();
 	getResults();
-	getImage();
 }
 
 function scissor() {
@@ -49,7 +50,6 @@ function scissor() {
 	userChoice = 'Scissor';
 	generateComputerChoice();
 	getResults();
-	getImage();
 }
 
 function getResults() {
@@ -89,7 +89,7 @@ function getResults() {
 	}
 }
 
-function getImage() {
+/*function getImage() {
 
 	if (userChoice == 'Rock' || computerChoice == 'Rock')
 	{
@@ -109,4 +109,5 @@ function getImage() {
 		userImageOut.src = "/imgs/scissor.png";
 		computerImageOut.src = "/imgs/scissor.png";
 	}
-}
+} 
+*/
