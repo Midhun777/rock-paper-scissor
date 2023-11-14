@@ -31,6 +31,7 @@ function rock() {
 	userChoice = 'Rock';
 	generateComputerChoice();
 	getResults();
+	getImage();
 }
 
 function paper() {
@@ -38,7 +39,7 @@ function paper() {
 	userChoice = 'Paper';
 	generateComputerChoice();
 	getResults();
-
+	getImage();
 }
 
 function scissor() {
@@ -46,6 +47,7 @@ function scissor() {
 	userChoice = 'Scissor';
 	generateComputerChoice();
 	getResults();
+	getImage();
 }
 
 function getResults() {
@@ -83,5 +85,29 @@ function getResults() {
 	{
 		displayResult.innerHTML = 'You Lose!';
 	}
+}
 
+function getImage() {
+
+	var userImageOut = document.getElementById("userImage");
+	var computerImageOut = document.getElementById("computerImage");
+
+	if (userChoice == 'Rock' || computerChoice == 'Rock')
+	{
+		userImageOut.src = "/imgs/rock.png";
+		computerImageOut.src = "/imgs/rock.png";
+
+	}
+
+	if (userChoice == 'Paper' || computerChoice == 'Paper')
+	{
+		userImageOut.src = "/imgs/paper.png";
+		computerImageOut.src = "/imgs/paper.png";
+	}
+
+	if (userChoice == 'Scissor' || computerChoice == 'Scissor')
+	{
+		userImageOut.src = "/imgs/scissor.png";
+		computerImageOut.src = "/imgs/scissor.png";
+	}
 }
