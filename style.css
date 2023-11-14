@@ -1,3 +1,27 @@
 body {
-    font-size: 15pt;
+	font-size: 15pt;
+	margin: 0px;
+	padding: 0px;
+	background-color: #E0F2F1;
+	font-family: 'Exo 2', sans-serif;
+}
+
+.nav{
+	border: 1px solid black;
+}
+
+.logo {
+	margin: 10px 0px 0px 10px;
+}
+
+.logo-text {
+	position: relative;
+	left: 45px;
+	bottom: 10px;
+	font-size: 23px;
+	font-weight: 600;
+}
+
+.cont{
+	
 }
