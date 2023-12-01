@@ -59,3 +59,29 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
+.btn-div{
+	display: flex;
+	justify-content:space-around;
+}
+
+.btn {
+	font-family: 'Exo 2', sans-serif;
+	width: 100px;
+	height :40px;
+	border:none;
+	border:1px solid black;
+	border-radius: 6px;
+	background-color:#FFC881;
+	font-size: 20px;
+	box-shadow: 0px 1px 1px black;
+
+}
+
+.btn:active{
+		width: 101px;
+	height :41px;
+	box-shadow: 0px 1px 2px black;
+	background-color:#FFC895;
+
+}

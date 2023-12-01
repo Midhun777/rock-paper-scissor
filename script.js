@@ -4,11 +4,9 @@ let displayResult = document.getElementById('result');
 let randomNumber;
 let userChoice;
 let computerChoice;
-var imageSrc= document.getElementById("userImage");
-var computerImageOut = document.getElementById("computerImage");
-
-imageSrc.src='/imgs/paper.png';
-
+var imageSrc = document.getElementsByClassName("userImage")[0];
+var computerImageOut = document.getElementsByClassName("computerImage")[0];
+var userImageOut = imageSrc;
 
 function generateComputerChoice() {
 
@@ -27,6 +25,7 @@ function generateComputerChoice() {
 	{
 		computerChoice = 'Scissor';
 	}
+	getImage();
 
 	computerChoiceDisplay.innerHTML = computerChoice;
 }
@@ -36,6 +35,8 @@ function rock() {
 	userChoice = 'Rock';
 	generateComputerChoice();
 	getResults();
+	getImage();
+
 }
 
 function paper() {
@@ -43,6 +44,8 @@ function paper() {
 	userChoice = 'Paper';
 	generateComputerChoice();
 	getResults();
+	getImage();
+
 }
 
 function scissor() {
@@ -50,6 +53,8 @@ function scissor() {
 	userChoice = 'Scissor';
 	generateComputerChoice();
 	getResults();
+	getImage();
+
 }
 
 function getResults() {
@@ -87,27 +92,12 @@ function getResults() {
 	{
 		displayResult.innerHTML = 'You Lose!';
 	}
+
 }
 
-/*function getImage() {
-
-	if (userChoice == 'Rock' || computerChoice == 'Rock')
-	{
-		userImageOut.src = "/imgs/rock.png";
-		computerImageOut.src = "/imgs/rock.png";
-
-	}
-
-	if (userChoice == 'Paper' || computerChoice == 'Paper')
-	{
-		userImageOut.src = "/imgs/paper.png";
-		computerImageOut.src = "/imgs/paper.png";
-	}
-
-	if (userChoice == 'Scissor' || computerChoice == 'Scissor')
-	{
-		userImageOut.src = "/imgs/scissor.png";
-		computerImageOut.src = "/imgs/scissor.png";
-	}
-} 
-*/
+function getImage() {
+	let userSrc = `/imgs/${userChoice.toLowerCase()}.png`
+	let compSrc = `/imgs/${computerChoice.toLowerCase()}.png`
+	userImageOut.src = userSrc;
+	computerImageOut.src = compSrc;
+}
