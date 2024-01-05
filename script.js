@@ -96,8 +96,8 @@ function getResults() {
 }
 
 function getImage() {
-	let userSrc = `/imgs/${userChoice.toLowerCase()}.png`
-	let compSrc = `/imgs/${computerChoice.toLowerCase()}.png`
+	let userSrc = `./imgs/${userChoice.toLowerCase()}.png`
+	let compSrc = `./imgs/${computerChoice.toLowerCase()}.png`
 	userImageOut.src = userSrc;
 	computerImageOut.src = compSrc;
 }
