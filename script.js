@@ -7,7 +7,10 @@ let computerChoice;
 var imageSrc = document.getElementsByClassName("userImage")[0];
 var computerImageOut = document.getElementsByClassName("computerImage")[0];
 var userImageOut = imageSrc;
-
+var computerScore = document.getElementById('computer-score');
+var userScore = document.getElementById('user-score');
+var u=0;
+var c=0;
 function generateComputerChoice() {
 
 	randomNumber = Math.random() * 3 + 1;
@@ -66,31 +69,43 @@ function getResults() {
 	if (userChoice == 'Rock' && computerChoice == 'Paper')
 	{
 		displayResult.innerHTML = 'You Lose!';
+		computerScore.innerHTML = c;
+		c++;
 	}
 
 	if (userChoice == 'Rock' && computerChoice == 'Scissor')
 	{
 		displayResult.innerHTML = 'You Won!';
+		userScore.innerHTML = u;
+		u++;
 	}
 
 	if (userChoice == 'Paper' && computerChoice == 'Scissor')
 	{
 		displayResult.innerHTML = 'You Lose!';
+		computerScore.innerHTML = c;
+		c++;
 	}
 
 	if (userChoice == 'Paper' && computerChoice == 'Rock')
 	{
 		displayResult.innerHTML = 'You Won!';
+		userScore.innerHTML = u;
+		u++;
 	}
 
 	if (userChoice == 'Scissor' && computerChoice == 'Paper')
 	{
 		displayResult.innerHTML = 'You Won!';
+		userScore.innerHTML = u;
+		u++;
 	}
 
 	if (userChoice == 'Scissor' && computerChoice == 'Rock')
 	{
 		displayResult.innerHTML = 'You Lose!';
+		computerScore.innerHTML = c;
+		c++;
 	}
 
 }
