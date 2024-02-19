@@ -9,6 +9,8 @@ var computerImageOut = document.getElementsByClassName("computerImage")[0];
 var userImageOut = imageSrc;
 var computerScore = document.getElementById('computer-score');
 var userScore = document.getElementById('user-score');
+var userDiv = document.getElementById('user-div');
+var computerDiv = document.getElementById('computer-div');
 var u = 0;
 var c = 0;
 
@@ -40,7 +42,7 @@ function rock() {
 	generateComputerChoice();
 	getResults();
 	getImage();
-
+	getBackground();
 }
 
 function paper() {
@@ -49,7 +51,7 @@ function paper() {
 	generateComputerChoice();
 	getResults();
 	getImage();
-
+	getBackground();
 }
 
 function scissor() {
@@ -58,20 +60,24 @@ function scissor() {
 	generateComputerChoice();
 	getResults();
 	getImage();
-
+	getBackground();
 }
 
 function getResults() {
 	if (userChoice == computerChoice)
 	{
 		displayResult.innerHTML = 'Draw!';
+		userDiv.style.background = '#26C6DADE';
+		computerDiv.style.background = '#26C6DADE';
 	}
 
 	if (userChoice == 'Rock' && computerChoice == 'Paper')
 	{
-		computerScore.innerHTML = c;
 		c++;
+		computerScore.innerHTML = c;
 		displayResult.innerHTML = 'You Lose!';
+		userDiv.style.background = '#EF5350DE';
+		computerDiv.style.background = '#26A69ADE';
 	}
 
 	if (userChoice == 'Rock' && computerChoice == 'Scissor')
@@ -79,35 +85,44 @@ function getResults() {
 		userScore.innerHTML = u;
 		u++;
 		displayResult.innerHTML = 'You Won!';
-
+		userDiv.style.background = '#26A69ADE';
+		computerDiv.style.background = '#EF5350DE';
 	}
 
 	if (userChoice == 'Paper' && computerChoice == 'Scissor')
 	{
-		computerScore.innerHTML = c;
 		c++;
+		computerScore.innerHTML = c;
 		displayResult.innerHTML = 'You Lose!';
+		userDiv.style.background = '#EF5350DE';
+		computerDiv.style.background = '#26A69ADE';
 	}
 
 	if (userChoice == 'Paper' && computerChoice == 'Rock')
 	{
-		userScore.innerHTML = u;
 		u++;
+		userScore.innerHTML = u;
 		displayResult.innerHTML = 'You Won!';
+		userDiv.style.background = '#26A69ADE';
+		computerDiv.style.background = '#EF5350DE';
 	}
 
 	if (userChoice == 'Scissor' && computerChoice == 'Paper')
 	{
-		userScore.innerHTML = u;
 		u++;
+		userScore.innerHTML = u;
 		displayResult.innerHTML = 'You Won!';
+		userDiv.style.background = '#26A69ADE';
+		computerDiv.style.background = '#EF5350DE';
 	}
 
 	if (userChoice == 'Scissor' && computerChoice == 'Rock')
 	{
-		computerScore.innerHTML = c;
 		c++;
+		computerScore.innerHTML = c;
 		displayResult.innerHTML = 'You Lose!';
+		userDiv.style.background = '#EF5350DE';
+		computerDiv.style.background = '#26A69ADE';
 	}
 
 }
@@ -119,5 +134,14 @@ function getImage() {
 	computerImageOut.src = compSrc;
 }
 
-console.log(c);
-console.log(u);
+function getBackground() {
+	if (displayResult == 'You Won!') {
+		userDiv.style.background = '#26A69ADE';
+		computerDiv.style.background = '#EF5350DE';
+	}
+
+	if (displayResult == 'You Lose!') {
+		userDiv.style.background = '#EF5350DE';
+		computerDiv.style.background = '#26A69ADE';
+	}
+}

@@ -25,6 +25,15 @@ body {
 	font-weight: 600;
 }
 
+.result-cont {
+	border: 1px solid #F77700;
+	width: 85%;
+	height: 300px;
+	;
+	display: none;
+
+}
+
 .cont {
 	width: 100%;
 	height: 220px;
@@ -36,7 +45,7 @@ body {
 .user-div,
 .computer-div {
 	background: #D3E1EF;
-	border: 2px solid #AE7349;
+	border: 1px solid black;
 	border-radius: 4px;
 	height: 100%;
 	width: 45%;
@@ -52,7 +61,7 @@ body {
 
 .you-text,
 .computer-text {
-	border-top: 2px solid #AE7349;
+	border-top: 1px solid black;
 	width: 100%;
 	height: 15%;
 	display: flex;
@@ -85,11 +94,11 @@ body {
 	background-color: #FFC895;
 }
 
-.score-cont{
+.score-cont {
 	font-size: 25px;
-	width : 100%;
+	width: 100%;
 	height: 130px;
 	display: flex;
-	justify-content:center;
+	justify-content: center;
 	align-items: center;
 }

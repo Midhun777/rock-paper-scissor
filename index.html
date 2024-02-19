@@ -21,14 +21,18 @@
 		</div>
 	</nav>
 
+	<div class="result-cont">
+
+	</div>
+
 	<div class="cont">
-		<div class="user-div">
+		<div class="user-div" id="user-div">
 			<div class="user-img">
 				<img src="./imgs/puzzle.png" alt="start" class="userImage" width="65%">
 			</div>
 			<div class="you-text">You</div>
 		</div>
-		<div class="computer-div">
+		<div class="computer-div" id="computer-div">
 			<div class="computer-img">
 				<img src="./imgs/puzzle.png" alt="start" class="computerImage" width="65%">
 			</div>
@@ -51,11 +55,11 @@
 		<button class="btn" id="paper" onclick="paper()">Paper</button>
 		<button class="btn" id="scissor" onclick="scissor()">Scissor</button>
 	</div>
-	
+
 	<div class="score-cont">
 		<span id="user-score">0</span><span>:</span><span id="computer-score">0</span>
 	</div>
-	
+
 	<script src="script.js"></script>
 
 </body>
