@@ -42,7 +42,6 @@ function rock() {
 	generateComputerChoice();
 	getResults();
 	getImage();
-	getBackground();
 }
 
 function paper() {
@@ -51,7 +50,6 @@ function paper() {
 	generateComputerChoice();
 	getResults();
 	getImage();
-	getBackground();
 }
 
 function scissor() {
@@ -60,15 +58,14 @@ function scissor() {
 	generateComputerChoice();
 	getResults();
 	getImage();
-	getBackground();
 }
 
 function getResults() {
 	if (userChoice == computerChoice)
 	{
 		displayResult.innerHTML = 'Draw!';
-		userDiv.style.background = '#26C6DADE';
-		computerDiv.style.background = '#26C6DADE';
+		userDiv.style.background = '#F2EBE1DE';
+		computerDiv.style.background = '#F2EBE1DE';
 	}
 
 	if (userChoice == 'Rock' && computerChoice == 'Paper')
@@ -132,16 +129,4 @@ function getImage() {
 	let compSrc = `./imgs/${computerChoice.toLowerCase()}.png`
 	userImageOut.src = userSrc;
 	computerImageOut.src = compSrc;
-}
-
-function getBackground() {
-	if (displayResult == 'You Won!') {
-		userDiv.style.background = '#26A69ADE';
-		computerDiv.style.background = '#EF5350DE';
-	}
-
-	if (displayResult == 'You Lose!') {
-		userDiv.style.background = '#EF5350DE';
-		computerDiv.style.background = '#26A69ADE';
-	}
 }
