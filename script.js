@@ -130,3 +130,4 @@ function getImage() {
 	userImageOut.src = userSrc;
 	computerImageOut.src = compSrc;
 }
+
