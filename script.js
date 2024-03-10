@@ -80,7 +80,9 @@ function getResults() {
 	if (userChoice == 'Rock' && computerChoice == 'Scissor')
 	{
 		userScore.innerHTML = u;
-		u++;
+//		u++;
+			u=u+7;
+
 		displayResult.innerHTML = 'You Won!';
 		userDiv.style.background = '#26A69ADE';
 		computerDiv.style.background = '#EF5350DE';
@@ -97,7 +99,8 @@ function getResults() {
 
 	if (userChoice == 'Paper' && computerChoice == 'Rock')
 	{
-		u++;
+//		u++;
+			u=u+7;
 		userScore.innerHTML = u;
 		displayResult.innerHTML = 'You Won!';
 		userDiv.style.background = '#26A69ADE';
@@ -106,7 +109,7 @@ function getResults() {
 
 	if (userChoice == 'Scissor' && computerChoice == 'Paper')
 	{
-		u++;
+		u=u+7;
 		userScore.innerHTML = u;
 		displayResult.innerHTML = 'You Won!';
 		userDiv.style.background = '#26A69ADE';
